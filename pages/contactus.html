@@ -29,12 +29,12 @@
       <b>Sat:</b>10am - 5pm</p>
     </div>
   </div>
+  
+<div id="map"></div>
 
-  <div align-items: center;>
-    <flex>
+  <div id="form">
   <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfcXdMKKi38CEn3Hb3ZOSt_iyvjMCAxaxzJQAnWYxDQO4X6cA/viewform?embedded=true" width="900" height="500" frameborder="0" marginheight="0" marginwidth="20">Loading...</iframe>
-    </flex>
-</div>
+  </div>
 <!--
   <div class="call-outs-container">
     <div class="call-out">
@@ -50,6 +50,24 @@
     </div>
   </div>
  -->
+ 
+ <script>
+      function initMap() {
+        var uluru = {lat: 37.2374, lng: -121.8404};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 10,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBNp_zNm2LRzdGrnGHC7okfQSHM2_6H0Pc&callback=initMap">
+    </script>
+    
 </body>
 
 </html>
