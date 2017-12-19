@@ -30,9 +30,12 @@
       </ul>
     </div>
   </div>
-  
-
-  <div class="call-outs-container">
+  <div id="buttondiv">
+    <button onclick="hideOffers()" id="hidebutton">
+      Hide Offers
+    </button>
+  </div>
+  <div id="specialoffers" class="call-outs-container">
     <div class="call-out">
       <h4>$15 Guitar Setup</h4>
       <p>A full string change, intonation and truss rod adjustment for only $15!</p>
@@ -46,6 +49,14 @@
     </div>
   </div>
 
+  <script>
+    function hideOffers() {
+      var x = document.getElementById("specialoffers");
+      var y = document.getElementById("hidebutton");
+      x.style.display = "none";
+      y.style.display = "none";
+    }
+  </script>
 </body>
 
 </html>
